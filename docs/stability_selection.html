@@ -24,27 +24,20 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="stability-selection 0.1.0 documentation" href="index.html"/> 
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Randomized LASSO" href="randomized_lasso.html" />
+    <link rel="prev" title="API Documentation" href="api.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -90,8 +83,13 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Stability selection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="randomized_lasso.html">Randomized LASSO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">General examples</a></li>
 </ul>
 
@@ -104,7 +102,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">stability-selection</a>
@@ -112,9 +110,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -159,72 +158,91 @@
   <div class="section" id="stability-selection">
 <h1>Stability selection<a class="headerlink" href="#stability-selection" title="Permalink to this headline">¶</a></h1>
 <p>The documentation of the stability_selection module.</p>
-<span class="target" id="module-stability_selection.stability_selection"></span><p>This module contains a scikit-learn compatible implementation of stability selection[1].</p>
+<span class="target" id="module-stability_selection.stability_selection"></span><p>This module contains a scikit-learn compatible implementation of
+stability selection <a class="reference internal" href="#r8a58b3c21514-1" id="id1">[R8a58b3c21514-1]</a> .</p>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>[1] Meinshausen, N. and Buhlmann, P., 2010. Stability selection. Journal of the Royal Statistical Society:</dt>
-<dd>Series B (Statistical Methodology), 72(4), pp.417-473.</dd>
-</dl>
+<table class="docutils citation" frame="void" id="r8a58b3c21514-1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[R8a58b3c21514-1]</a></td><td>Meinshausen, N. and Buhlmann, P., 2010. Stability selection.
+Journal of the Royal Statistical Society: Series B
+(Statistical Methodology), 72(4), pp.417-473.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="r8a58b3c21514-2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[R8a58b3c21514-2]</td><td><p class="first">Shah, R.D. and Samworth, R.J., 2013. Variable selection with
+error control: another look at stability selection. Journal
+of the Royal Statistical Society: Series B (Statistical Methodology),</p>
+<blockquote class="last">
+<div>75(1), pp.55-80.</div></blockquote>
+</td></tr>
+</tbody>
+</table>
 <dl class="class">
 <dt id="stability_selection.stability_selection.StabilitySelection">
-<em class="property">class </em><code class="descclassname">stability_selection.stability_selection.</code><code class="descname">StabilitySelection</code><span class="sig-paren">(</span><em>base_estimator=LogisticRegression(C=1.0</em>, <em>class_weight=None</em>, <em>dual=False</em>, <em>fit_intercept=True</em>, <em>intercept_scaling=1</em>, <em>max_iter=100</em>, <em>multi_class='ovr'</em>, <em>n_jobs=1</em>, <em>penalty='l1'</em>, <em>random_state=None</em>, <em>solver='liblinear'</em>, <em>tol=0.0001</em>, <em>verbose=0</em>, <em>warm_start=False)</em>, <em>lambda_name='C'</em>, <em>lambda_grid=None</em>, <em>n_bootstrap_iterations=100</em>, <em>sample_fraction=0.5</em>, <em>threshold=0.6</em>, <em>bootstrap_func=&lt;function bootstrap_without_replacement&gt;</em>, <em>bootstrap_threshold=None</em>, <em>verbose=0</em>, <em>n_jobs=1</em>, <em>pre_dispatch='2*n_jobs'</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/stability_selection/stability_selection.html#StabilitySelection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#stability_selection.stability_selection.StabilitySelection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stability selection [1] fits the estimator <cite>base_estimator</cite> on bootstrap samples of the original data set, for
-different values of the regularization parameter for <cite>base_estimator</cite>. Variables that reliably get selected by the
-model in these bootstrap samples are considered to be stable variables.</p>
+<em class="property">class </em><code class="descclassname">stability_selection.stability_selection.</code><code class="descname">StabilitySelection</code><span class="sig-paren">(</span><em>base_estimator=LogisticRegression(C=1.0</em>, <em>class_weight=None</em>, <em>dual=False</em>, <em>fit_intercept=True</em>, <em>intercept_scaling=1</em>, <em>max_iter=100</em>, <em>multi_class='ovr'</em>, <em>n_jobs=1</em>, <em>penalty='l1'</em>, <em>random_state=None</em>, <em>solver='liblinear'</em>, <em>tol=0.0001</em>, <em>verbose=0</em>, <em>warm_start=False)</em>, <em>lambda_name='C'</em>, <em>lambda_grid=array([1.00000000e-05</em>, <em>1.33352143e-05</em>, <em>1.77827941e-05</em>, <em>2.37137371e-05</em>, <em>3.16227766e-05</em>, <em>4.21696503e-05</em>, <em>5.62341325e-05</em>, <em>7.49894209e-05</em>, <em>1.00000000e-04</em>, <em>1.33352143e-04</em>, <em>1.77827941e-04</em>, <em>2.37137371e-04</em>, <em>3.16227766e-04</em>, <em>4.21696503e-04</em>, <em>5.62341325e-04</em>, <em>7.49894209e-04</em>, <em>1.00000000e-03</em>, <em>1.33352143e-03</em>, <em>1.77827941e-03</em>, <em>2.37137371e-03</em>, <em>3.16227766e-03</em>, <em>4.21696503e-03</em>, <em>5.62341325e-03</em>, <em>7.49894209e-03</em>, <em>1.00000000e-02])</em>, <em>n_bootstrap_iterations=100</em>, <em>sample_fraction=0.5</em>, <em>threshold=0.6</em>, <em>bootstrap_func=&lt;function bootstrap_without_replacement&gt;</em>, <em>bootstrap_threshold=None</em>, <em>verbose=0</em>, <em>n_jobs=1</em>, <em>pre_dispatch='2*n_jobs'</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/stability_selection/stability_selection.html#StabilitySelection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#stability_selection.stability_selection.StabilitySelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stability selection <a class="reference internal" href="#r82f9ff7e83a2-1" id="id2">[1]</a> fits the estimator <cite>base_estimator</cite> on
+bootstrap samples of the original data set, for different values of
+the regularization parameter for <cite>base_estimator</cite>. Variables that
+reliably get selected by the model in these bootstrap samples are
+considered to be stable variables.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>base_estimator</strong> : object.</p>
-<blockquote>
-<div><p>The base estimator used for stability selection.</p>
-</div></blockquote>
-<p><strong>lambda_name</strong> : str.</p>
-<blockquote>
-<div><p>The name of the penalization parameter for the estimator <cite>base_estimator</cite>.</p>
-</div></blockquote>
-<p><strong>lambda_grid</strong> : array-like.</p>
-<blockquote>
-<div><p>Grid of values of the penalization parameter to iterate over.</p>
-</div></blockquote>
-<p><strong>n_bootstrap_iterations</strong> : integer.</p>
-<blockquote>
-<div><p>Number of bootstrap samples to create.</p>
-</div></blockquote>
-<p><strong>sample_fraction</strong> : float, optional</p>
-<blockquote>
-<div><p>The fraction of samples to be used in each bootstrap sample.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>base_estimator</strong> <span class="classifier-delimiter">:</span> <span class="classifier">object.</span></dt>
+<dd><p class="first last">The base estimator used for stability selection. The estimator
+must have either a <code class="docutils literal notranslate"><span class="pre">feature_importances_</span></code> or <code class="docutils literal notranslate"><span class="pre">coef_</span></code>
+attribute after fitting.</p>
+</dd>
+<dt><strong>lambda_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str.</span></dt>
+<dd><p class="first last">The name of the penalization parameter for the estimator
+<cite>base_estimator</cite>.</p>
+</dd>
+<dt><strong>lambda_grid</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like.</span></dt>
+<dd><p class="first last">Grid of values of the penalization parameter to iterate over.</p>
+</dd>
+<dt><strong>n_bootstrap_iterations</strong> <span class="classifier-delimiter">:</span> <span class="classifier">integer.</span></dt>
+<dd><p class="first last">Number of bootstrap samples to create.</p>
+</dd>
+<dt><strong>sample_fraction</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float, optional</span></dt>
+<dd><p class="first last">The fraction of samples to be used in each bootstrap sample.
 Should be between 0 and 1. If 1, all samples are used.</p>
-</div></blockquote>
-<p><strong>threshold</strong> : float.</p>
-<blockquote>
-<div><p>Threshold defining the minimum cutoff value for the stability scores.</p>
-</div></blockquote>
-<p><strong>bootstrap_func</strong> : str or callable fun (default=bootstrap_without_replacement)</p>
-<blockquote>
-<div><dl class="docutils">
+</dd>
+<dt><strong>threshold</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float.</span></dt>
+<dd><p class="first last">Threshold defining the minimum cutoff value for the stability scores.</p>
+</dd>
+<dt><strong>bootstrap_func</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str or callable fun (default=bootstrap_without_replacement)</span></dt>
+<dd><dl class="first last docutils">
 <dt>The function used to subsample the data. This parameter can be:</dt>
 <dd><ul class="first last simple">
 <li><dl class="first docutils">
 <dt>A string, which must be one of</dt>
 <dd><ul class="first last">
 <li>‘subsample’: For subsampling without replacement.</li>
-<li>‘complementary_pairs’: For complementary pairs subsampling [2].</li>
+<li>‘complementary_pairs’: For complementary pairs subsampling <a class="reference internal" href="#r82f9ff7e83a2-2" id="id3">[2]</a> .</li>
+<li><dl class="first docutils">
+<dt>‘stratified’: For stratified bootstrapping in imbalanced</dt>
+<dd>classification.</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li>A function that takes n_samples, and a random state
+<li>A function that takes y, and a random state
 as inputs and returns a list of sample indices in the range
-(0, n_samples-1). By default, indices are uniformly subsampled.</li>
+(0, len(y)-1). By default, indices are uniformly subsampled.</li>
 </ul>
 </dd>
 </dl>
-</div></blockquote>
-<p><strong>bootstrap_threshold</strong> : string, float, optional default None</p>
-<blockquote>
-<div><p>The threshold value to use for feature selection. Features whose
+</dd>
+<dt><strong>bootstrap_threshold</strong> <span class="classifier-delimiter">:</span> <span class="classifier">string, float, optional default None</span></dt>
+<dd><p class="first last">The threshold value to use for feature selection. Features whose
 importance is greater or equal are kept while the others are
 discarded. If “median” (resp. “mean”), then the <code class="docutils literal notranslate"><span class="pre">threshold</span></code> value is
 the median (resp. the mean) of the feature importances. A scaling
@@ -232,22 +250,19 @@ factor (e.g., “1.25*mean”) may also be used. If None and if the
 estimator has a parameter penalty set to l1, either explicitly
 or implicitly (e.g, Lasso), the threshold used is 1e-5.
 Otherwise, “mean” is used by default.</p>
-</div></blockquote>
-<p><strong>verbose</strong> : integer.</p>
-<blockquote>
-<div><p>Controls the verbosity: the higher, the more messages.</p>
-</div></blockquote>
-<p><strong>n_jobs</strong> : int, default=1</p>
-<blockquote>
-<div><p>Number of jobs to run in parallel.</p>
-</div></blockquote>
-<p><strong>pre_dispatch</strong> : int, or string, optional</p>
-<blockquote>
-<div><p>Controls the number of jobs that get dispatched during parallel
+</dd>
+<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">integer.</span></dt>
+<dd><p class="first last">Controls the verbosity: the higher, the more messages.</p>
+</dd>
+<dt><strong>n_jobs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int, default=1</span></dt>
+<dd><p class="first last">Number of jobs to run in parallel.</p>
+</dd>
+<dt><strong>pre_dispatch</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int, or string, optional</span></dt>
+<dd><p class="first">Controls the number of jobs that get dispatched during parallel
 execution. Reducing this number can be useful to avoid an
 explosion of memory consumption when more jobs get dispatched
 than CPUs can process. This parameter can be:</p>
-<blockquote>
+<blockquote class="last">
 <div><ul class="simple">
 <li>None, in which case all the jobs are immediately
 created and spawned. Use this for lightweight and
@@ -259,49 +274,54 @@ spawned</li>
 as in ‘2*n_jobs’</li>
 </ul>
 </div></blockquote>
-</div></blockquote>
-<p><strong>random_state</strong> : int, RandomState instance or None, optional, default=None</p>
-<blockquote class="last">
-<div><p>Pseudo random number generator state used for random uniform sampling
+</dd>
+<dt><strong>random_state</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int, RandomState instance or None, optional, default=None</span></dt>
+<dd><p class="first last">Pseudo random number generator state used for random uniform sampling
 from lists of possible values instead of scipy.stats distributions.
 If int, random_state is the seed used by the random number generator;
 If RandomState instance, random_state is the random number generator;
 If None, the random number generator is the RandomState instance used
 by <cite>np.random</cite>.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r1" rules="none">
+<table class="docutils citation" frame="void" id="r82f9ff7e83a2-1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[R1]</a></td><td>Meinshausen, N. and Buhlmann, P., 2010. Stability selection. Journal of the
-Royal Statistical Society: Series B (Statistical Methodology), 72(4), pp.417-473.</td></tr>
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> Meinshausen, N. and Buhlmann, P., 2010. Stability selection.
+Journal of the Royal Statistical Society: Series B
+(Statistical Methodology), 72(4), pp.417-473.</td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="r2" rules="none">
+<table class="docutils citation" frame="void" id="r82f9ff7e83a2-2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[R2]</a></td><td>Shah, R.D. and Samworth, R.J., 2013. Variable selection with error control:
-another look at stability selection. Journal of the Royal Statistical Society:
-Series B (Statistical Methodology), 75(1), pp.55-80.</td></tr>
+<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id5">2</a>)</em> <p>Shah, R.D. and Samworth, R.J., 2013. Variable selection with
+error control: another look at stability selection. Journal
+of the Royal Statistical Society: Series B (Statistical Methodology),</p>
+<blockquote class="last">
+<div>75(1), pp.55-80.</div></blockquote>
+</td></tr>
 </tbody>
 </table>
-<p class="rubric">Attributes</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="86%" />
-</colgroup>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
 <tbody valign="top">
-<tr class="row-odd"><td><strong>stability_scores_</strong></td>
-<td>(array, shape = [n_features, n_alphas]) Array of stability scores for each feature for each value of the penalization parameter.</td>
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>stability_scores_</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array, shape = [n_features, n_alphas]</span></dt>
+<dd><p class="first last">Array of stability scores for each feature for each value of the
+penalization parameter.</p>
+</dd>
+</dl>
+</td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Methods</p>
 <dl class="method">
 <dt id="stability_selection.stability_selection.StabilitySelection.fit">
 <code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/stability_selection/stability_selection.html#StabilitySelection.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#stability_selection.stability_selection.StabilitySelection.fit" title="Permalink to this definition">¶</a></dt>
@@ -310,14 +330,14 @@ Series B (Statistical Methodology), 75(1), pp.55-80.</td></tr>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : {array-like, sparse matrix}, shape = [n_samples, n_features]</p>
-<blockquote>
-<div><p>The training input samples.</p>
-</div></blockquote>
-<p><strong>y</strong> : array-like, shape = [n_samples]</p>
-<blockquote class="last">
-<div><p>The target values.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">{array-like, sparse matrix}, shape = [n_samples, n_features]</span></dt>
+<dd><p class="first last">The training input samples.</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like, shape = [n_samples]</span></dt>
+<dd><p class="first last">The target values.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -332,26 +352,28 @@ Series B (Statistical Methodology), 75(1), pp.55-80.</td></tr>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>indices</strong> : boolean (default False)</p>
-<blockquote>
-<div><p>If True, the return value will be an array of integers, rather
-than a boolean mask.</p>
-</div></blockquote>
-<p><strong>threshold: float.</strong></p>
-<blockquote>
-<div><p>Threshold defining the minimum cutoff value for the stability scores.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>indices</strong> <span class="classifier-delimiter">:</span> <span class="classifier">boolean (default False)</span></dt>
+<dd><p class="first last">If True, the return value will be an array of integers,
+rather than a boolean mask.</p>
+</dd>
+<dt><strong>threshold: float.</strong></dt>
+<dd><p class="first last">Threshold defining the minimum cutoff value for the
+stability scores.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>support</strong> : array</p>
-<blockquote class="last">
-<div><p>An index that selects the retained features from a feature vector.
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>support</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">An index that selects the retained features from a feature vector.
 If <cite>indices</cite> is False, this is a boolean array of shape
 [# input features], in which an element is True iff its
 corresponding feature is selected for retention. If <cite>indices</cite> is
 True, this is an integer array of shape [# output features] whose
 values are indices into the input feature vector.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -366,20 +388,22 @@ values are indices into the input feature vector.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array of shape [n_samples, n_features]</p>
-<blockquote>
-<div><p>The input samples.</p>
-</div></blockquote>
-<p><strong>threshold: float.</strong></p>
-<blockquote>
-<div><p>Threshold defining the minimum cutoff value for the stability scores.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array of shape [n_samples, n_features]</span></dt>
+<dd><p class="first last">The input samples.</p>
+</dd>
+<dt><strong>threshold: float.</strong></dt>
+<dd><p class="first last">Threshold defining the minimum cutoff value for the
+stability scores.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>X_r</strong> : array of shape [n_samples, n_selected_features]</p>
-<blockquote class="last">
-<div><p>The input samples with only the selected features.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>X_r</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array of shape [n_samples, n_selected_features]</span></dt>
+<dd><p class="first last">The input samples with only the selected features.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -396,18 +420,18 @@ values are indices into the input feature vector.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>stability_selection</strong> : StabilitySelection</p>
-<blockquote>
-<div><p>Fitted instance of StabilitySelection.</p>
-</div></blockquote>
-<p><strong>threshold_highlight</strong> : float</p>
-<blockquote>
-<div><p>Threshold defining the cutoff for the stability scores for the variables that need to be highlighted.</p>
-</div></blockquote>
-<p><strong>kwargs</strong> : dict</p>
-<blockquote class="last">
-<div><p>Arguments passed to matplotlib plot function.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>stability_selection</strong> <span class="classifier-delimiter">:</span> <span class="classifier">StabilitySelection</span></dt>
+<dd><p class="first last">Fitted instance of StabilitySelection.</p>
+</dd>
+<dt><strong>threshold_highlight</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Threshold defining the cutoff for the stability scores for the
+variables that need to be highlighted.</p>
+</dd>
+<dt><strong>kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Arguments passed to matplotlib plot function.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -419,11 +443,18 @@ values are indices into the input feature vector.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="randomized_lasso.html" class="btn btn-neutral float-right" title="Randomized LASSO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api.html" class="btn btn-neutral" title="API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -434,7 +465,7 @@ values are indices into the input feature vector.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -453,6 +484,7 @@ values are indices into the input feature vector.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'0.1.0',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -462,22 +494,17 @@ values are indices into the input feature vector.</p>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
