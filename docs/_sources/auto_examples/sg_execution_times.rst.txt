@@ -1,0 +1,11 @@
+
+:orphan:
+
+.. _sphx_glr_auto_examples_sg_execution_times:
+
+Computation times
+=================
+**01:45.023** total execution time for **auto_examples** files:
+
+- **01:09.241**: :ref:`sphx_glr_auto_examples_plot_stability_scores.py` (plot_stability_scores.py)
+- **00:35.782**: :ref:`sphx_glr_auto_examples_plot_randomized_lasso_path.py` (plot_randomized_lasso_path.py)

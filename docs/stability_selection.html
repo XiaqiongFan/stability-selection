@@ -183,7 +183,7 @@ of the Royal Statistical Society: Series B (Statistical Methodology),</p>
 </table>
 <dl class="class">
 <dt id="stability_selection.stability_selection.StabilitySelection">
-<em class="property">class </em><code class="descclassname">stability_selection.stability_selection.</code><code class="descname">StabilitySelection</code><span class="sig-paren">(</span><em>base_estimator=LogisticRegression(C=1.0</em>, <em>class_weight=None</em>, <em>dual=False</em>, <em>fit_intercept=True</em>, <em>intercept_scaling=1</em>, <em>max_iter=100</em>, <em>multi_class='ovr'</em>, <em>n_jobs=1</em>, <em>penalty='l1'</em>, <em>random_state=None</em>, <em>solver='liblinear'</em>, <em>tol=0.0001</em>, <em>verbose=0</em>, <em>warm_start=False)</em>, <em>lambda_name='C'</em>, <em>lambda_grid=array([1.00000000e-05</em>, <em>1.33352143e-05</em>, <em>1.77827941e-05</em>, <em>2.37137371e-05</em>, <em>3.16227766e-05</em>, <em>4.21696503e-05</em>, <em>5.62341325e-05</em>, <em>7.49894209e-05</em>, <em>1.00000000e-04</em>, <em>1.33352143e-04</em>, <em>1.77827941e-04</em>, <em>2.37137371e-04</em>, <em>3.16227766e-04</em>, <em>4.21696503e-04</em>, <em>5.62341325e-04</em>, <em>7.49894209e-04</em>, <em>1.00000000e-03</em>, <em>1.33352143e-03</em>, <em>1.77827941e-03</em>, <em>2.37137371e-03</em>, <em>3.16227766e-03</em>, <em>4.21696503e-03</em>, <em>5.62341325e-03</em>, <em>7.49894209e-03</em>, <em>1.00000000e-02])</em>, <em>n_bootstrap_iterations=100</em>, <em>sample_fraction=0.5</em>, <em>threshold=0.6</em>, <em>bootstrap_func=&lt;function bootstrap_without_replacement&gt;</em>, <em>bootstrap_threshold=None</em>, <em>verbose=0</em>, <em>n_jobs=1</em>, <em>pre_dispatch='2*n_jobs'</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/stability_selection/stability_selection.html#StabilitySelection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#stability_selection.stability_selection.StabilitySelection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">stability_selection.stability_selection.</code><code class="descname">StabilitySelection</code><span class="sig-paren">(</span><em>base_estimator=LogisticRegression(C=1.0</em>, <em>class_weight=None</em>, <em>dual=False</em>, <em>fit_intercept=True</em>, <em>intercept_scaling=1</em>, <em>max_iter=100</em>, <em>multi_class='warn'</em>, <em>n_jobs=None</em>, <em>penalty='l1'</em>, <em>random_state=None</em>, <em>solver='warn'</em>, <em>tol=0.0001</em>, <em>verbose=0</em>, <em>warm_start=False)</em>, <em>lambda_name='C'</em>, <em>lambda_grid=array([1.00000000e-05</em>, <em>1.33352143e-05</em>, <em>1.77827941e-05</em>, <em>2.37137371e-05</em>, <em>3.16227766e-05</em>, <em>4.21696503e-05</em>, <em>5.62341325e-05</em>, <em>7.49894209e-05</em>, <em>1.00000000e-04</em>, <em>1.33352143e-04</em>, <em>1.77827941e-04</em>, <em>2.37137371e-04</em>, <em>3.16227766e-04</em>, <em>4.21696503e-04</em>, <em>5.62341325e-04</em>, <em>7.49894209e-04</em>, <em>1.00000000e-03</em>, <em>1.33352143e-03</em>, <em>1.77827941e-03</em>, <em>2.37137371e-03</em>, <em>3.16227766e-03</em>, <em>4.21696503e-03</em>, <em>5.62341325e-03</em>, <em>7.49894209e-03</em>, <em>1.00000000e-02])</em>, <em>n_bootstrap_iterations=100</em>, <em>sample_fraction=0.5</em>, <em>threshold=0.6</em>, <em>bootstrap_func=&lt;function bootstrap_without_replacement&gt;</em>, <em>bootstrap_threshold=None</em>, <em>verbose=0</em>, <em>n_jobs=1</em>, <em>pre_dispatch='2*n_jobs'</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/stability_selection/stability_selection.html#StabilitySelection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#stability_selection.stability_selection.StabilitySelection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stability selection <a class="reference internal" href="#r82f9ff7e83a2-1" id="id2">[1]</a> fits the estimator <cite>base_estimator</cite> on
 bootstrap samples of the original data set, for different values of
 the regularization parameter for <cite>base_estimator</cite>. Variables that
@@ -461,7 +461,7 @@ variables that need to be highlighted.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Thomas Huijskens.
+        &copy; Copyright 2018, Thomas Huijskens
 
     </p>
   </div>
@@ -480,21 +480,14 @@ variables that need to be highlighted.</p>
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
 
   
 
