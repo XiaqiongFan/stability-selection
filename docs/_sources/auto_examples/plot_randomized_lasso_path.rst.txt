@@ -15,7 +15,6 @@ An example plot of the stability scores for each variable after fitting :class:`
 with :class:`stability_selection.RandomizedLasso`
 
 
-
 .. rst-class:: sphx-glr-horizontal
 
 
@@ -348,7 +347,7 @@ with :class:`stability_selection.RandomizedLasso`
 |
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     import numpy as np
@@ -401,7 +400,7 @@ with :class:`stability_selection.RandomizedLasso`
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  35.782 seconds)
+   **Total running time of the script:** ( 0 minutes  41.675 seconds)
 
 
 .. _sphx_glr_download_auto_examples_plot_randomized_lasso_path.py:

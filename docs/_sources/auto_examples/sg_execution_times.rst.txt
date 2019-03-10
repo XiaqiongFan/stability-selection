@@ -5,7 +5,7 @@
 
 Computation times
 =================
-**01:45.023** total execution time for **auto_examples** files:
+**02:06.273** total execution time for **auto_examples** files:
 
-- **01:09.241**: :ref:`sphx_glr_auto_examples_plot_stability_scores.py` (plot_stability_scores.py)
-- **00:35.782**: :ref:`sphx_glr_auto_examples_plot_randomized_lasso_path.py` (plot_randomized_lasso_path.py)
+- **01:24.598**: :ref:`sphx_glr_auto_examples_plot_stability_scores.py` (``plot_stability_scores.py``)
+- **00:41.675**: :ref:`sphx_glr_auto_examples_plot_randomized_lasso_path.py` (``plot_randomized_lasso_path.py``)
